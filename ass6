@@ -1,0 +1,185 @@
+1question
+
+class Work {
+	
+    String location;
+	int time;
+	
+	void work() {
+		System.out.println("working");
+	}
+ }	
+	
+	public class Inherit extends Work{
+		void salary() {
+			System.out.println("salarying");
+		}
+
+	public static void main(String[] args) {
+		
+		String location;
+		int time;
+		
+		Work Ws=new Work();
+       Ws.work();
+		location="Andhra";
+		time=4;
+		System.out.println("location:" +location);
+		System.out.println("time:" +time);
+		
+
+	}
+
+	}
+
+2question
+
+package present;
+class Courseclass{
+	void learn() {
+		System.out.println("parent learning method");
+		
+	}
+}
+
+public class Overriding extends Courseclass {
+
+	@Override
+	void learn() {
+		System.out.println("child learning method");
+		
+	}
+	public static void main(String[] args) {
+		
+		Overriding m= new Overriding();
+		Courseclass c=new Courseclass();
+    m.learn();
+    c.learn();
+
+	}
+
+}
+
+4 question
+
+package present;
+class Courseclass{
+	private String myid="Courseclass";
+	void learn() {
+		System.out.println("courseclass learning method");
+		
+	}
+	private void subration() {
+		int a=5;
+		int b=4;
+		System.out.println(a-b);
+	}
+	public void getid() {
+		System.out.println(myid);
+	}
+	public void insert() {
+		int a=9;int c=3;
+		int d=a/c;
+		System.out.println("divding:"+d);
+		subration();
+	}
+}
+
+
+public class Overriding extends Courseclass {
+
+	@Override
+	void learn() {
+		System.out.println("child learning method");
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Overriding m= new Overriding();
+		m.learn();
+		m.getid();
+		m.insert();
+	}
+
+}
+
+5question  
+
+package present;
+class Vehicles {
+    void sound() {//method
+        System.out.println("Vehicles sound");
+    }
+
+    // Overloading same name, different parameter
+    void sound(String type) {
+        System.out.println("Vehicles makes " + type + "sound ");
+    }
+}
+class  bike extends Vehicles{
+	void sound() {  //overriding
+		System.out.println("Bike riding");
+	}
+}
+
+
+public class Inoverloadoverriding {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Vehicles v =new Vehicles();
+		v.sound();
+		v.sound(" noise ");//overload
+		
+		bike b=new bike();
+		b.sound();//override
+		
+		
+
+
+	}
+
+}
+
+3 question 
+class college{
+interface Student {
+    void displayInfo();
+    void attendClass();
+    void submitAssignment();
+}
+
+class CollegeStudent implements Student {
+    private String studentName;
+    private String studentId;
+
+    public CollegeStudent(String studentName, String studentId) {
+        this.studentName = studentName;
+        this.studentId = studentId;
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println("Student Name: " + studentName);
+        System.out.println("Student ID: " + studentId);
+    }
+
+    @Override
+    public void attendClass() {
+        System.out.println(studentName + " is attending classes.");
+    }
+
+    @Override
+    public void submitAssignment() {
+        System.out.println(studentName + " has submitted the assignment.");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        CollegeStudent student = new CollegeStudent("Mouli", "538");
+        student.displayInfo();
+        student.attendClass();
+        student.submitAssignment();
+    }
+}
+
