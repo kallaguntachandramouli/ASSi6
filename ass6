@@ -116,7 +116,7 @@ class Vehicles {
         System.out.println("Vehicles makes " + type + "sound ");
     }
 }
-class  bike extends Vehicles{
+class  Bike extends Vehicles{
 	void sound() {  //overriding
 		System.out.println("Bike riding");
 	}
@@ -142,7 +142,7 @@ public class Inoverloadoverriding {
 }
 
 3 question 
-class college{
+
 interface Student {
     void displayInfo();
     void attendClass();
